@@ -1,0 +1,23 @@
+apiVersion: patio/v1alpha1
+sources:
+  main:
+    connection: primary
+components:
+  api:
+    source: main
+    root: .
+    kind: server
+    build:
+      template: node-service@1
+      context: .
+      workdir: .
+    runtime:
+      command: [node, server.cjs]
+      port: 8080
+      health:
+        path: /healthz
+    routes:
+      - path: /
+        match: prefix
+ai:
+  component: api

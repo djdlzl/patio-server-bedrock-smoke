@@ -1,0 +1,15 @@
+{
+  "name": "patio-server-bedrock-smoke",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal Patio server build, deployment and Bedrock smoke example",
+  "scripts": {
+    "start": "node server.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "3.1156.0"
+  }
+}
